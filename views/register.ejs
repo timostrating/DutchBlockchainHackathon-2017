@@ -1,40 +1,35 @@
-<!doctype html>
-	<html>
-	<head>
-	</head>
-	<body>
+<% include include/header.ejs %>
 
-					<% if (message.length > 0) { %>
-						<div class="alert alert-danger"><%= message %></div>
-					<% } %>
-					<form action="/register" method="post">
-						<div class="form-group">
-							<label>Username</label>
-							<input type="text" class="form-control" name="username">
-						</div>
-						<div class="form-group">
-							<label>Password</label>
-							<input type="password" class="form-control" name="password">
-						</div>
-						<div class="form-group">
-							<label>Repeat</label>
-							<input type="password" class="form-control" name="pwver">
-						</div>
-						<div class="form-group">
-							<label>Email</label>
-							<input type="text" class="form-control" name="email">
-						</div>
-						<div class="form-group">
-							<label>Repeat</label>
-							<input type="text" class="form-control" name="emver">
-						</div>
-						<button type="submit" class="btn btn-sylva square-btn-adjust btn-lg">Signup</button>
-					</form>
-					<hr>
-					<p>Already have an account? <a href="/login">Login</a></p>
-					<p>Or go <a href="/">home</a>.</p>
-				</div>
-			</div>
+<div class="container">
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+	<form action="/register" method="post">
+		<div class="form-group">
+			<label>Username</label>
+			<input type="text" class="form-control" name="username">
 		</div>
-	</body>
-</html>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" class="form-control" name="password">
+		</div>
+		<div class="form-group">
+			<label>Repeat</label>
+			<input type="password" class="form-control" name="pwver">
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email">
+		</div>
+		<div class="form-group">
+			<label>Repeat</label>
+			<input type="text" class="form-control" name="emver">
+		</div>
+		<button type="submit" class="btn btn-primary square-btn-adjust btn-lg">Signup</button>
+	</form>
+	<hr>
+	<p>Already have an account? <a href="/login">Login</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+</div>
+
+<% include include/footer.ejs %>

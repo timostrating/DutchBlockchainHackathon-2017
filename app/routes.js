@@ -1,13 +1,12 @@
 module.exports = function(app,passport){
+
 	//+================+
 	//| show index     |
 	//+================+
 	app.get('/',function(req,res){
 		res.render('index.ejs');
 	});
-	app.get('/2',function(req,res){
-		res.render('user2.ejs');
-	});
+
 	//+================+
 	//| Local Login    |
 	//+================+
@@ -19,6 +18,7 @@ module.exports = function(app,passport){
 		failureRedirect: '/login',
 		failureFlash: true
 	}));
+
 	//+================+
 	//| Local Register |
 	//+================+
@@ -30,17 +30,30 @@ module.exports = function(app,passport){
 		failureRedirect: '/register',
 		failureFlash: true
 	}));
+
 	//+===============+
-	//| handle other  |
+	//|    Account    |
 	//+===============+
-	app.get('/user',isLoggedIn,function(req,res){
+	app.get('/user',isLoggedIn,function(req,res){  
 		res.render('user.ejs',{user:req.user});
 	});
 	app.get('/logout',function(req,res){
 		req.logout();
 		res.redirect('/');
 	});
+
+	app.get('/dev', function(req,res){
+		res.render('user.ejs',{"user":{"id":09809,"username":"henk"}});
+	});
+
+	//+===============+
+	//|     other     |
+	//+===============+
+	app.get('*',function(req,res){
+		res.render('404.ejs');
+	});
 };
+
 function isLoggedIn(req,res,next){
 	if (req.isAuthenticated())
 		return next();
