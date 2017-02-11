@@ -1,0 +1,100 @@
+/*overlay fix*/
+.navbar-wrapper {
+  position: absolute;
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+/*Navbar color fix*/
+.bg-dark {
+  background-color: #202020 !important;
+}
+
+a.bg-dark:focus, a.bg-inverse:hover {
+  background-color: #4d4d4d !important;
+}
+.nav-item > .dark{
+  color: #fff;
+}
+.nav-item > .dark:hover{
+  color: #ddd;
+}
+.bg-dark > .dark{
+  color: #fff;
+}
+.square-btn-adjust {
+  border: 1px solid; 
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.btn-sylva {
+  color: #202020;
+  background-color: #B0FE76;
+  border-color: #B0FE76;
+}
+
+.btn-sylva:hover {
+  color: #202020;
+  background-color: #4db201;
+  border-color: #4db201;
+}
+.btn-outline-sylva{
+  color: #B0FE76;
+  background-image: none;
+  background-color: transparent;
+  border-color: #B0FE76;
+}
+.btn-outline-sylva:hover {
+  color: #202020;
+  background-color: #B0FE76;
+  border-color: #B0FE76;
+}
+
+.btn-fb {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.btn-fb:hover {
+  color: #202020;
+  background-color: #8B9DC3;
+  border-color: #8B9DC3;
+}
+.btn-outline-fb{
+  color: #3b5998;
+  background-image: none;
+  background-color: transparent;
+  border-color: #3b5998;
+}
+.btn-outline-fb:hover {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.btn-google {
+  color: #fff;
+  background-color: #d34836;
+  border-color: #d34836;
+}
+
+.btn-google:hover {
+  color: #202020;
+  background-color: #8B9DC3;
+  border-color: #8B9DC3;
+}
+.btn-outline-google{
+  color: #d34836;
+  background-image: none;
+  background-color: transparent;
+  border-color: #d34836;
+}
+.btn-outline-google:hover {
+  color: #fff;
+  background-color: #d34836;
+  border-color: #d34836;
+}
+/*
+#d34836*/
