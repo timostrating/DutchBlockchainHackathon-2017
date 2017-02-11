@@ -10,8 +10,8 @@ module.exports = function(app,passport){
 	//+================+
 	//| Local Login    |
 	//+================+
-	app.get('/login',function(req,res){
-		res.render('login.ejs',{message: req.flash('loginMessage')});
+	app.get('/login', function(req,res){
+		res.render('login.ejs', {message: req.flash('loginMessage')});
 	});
 	app.post('/login',passport.authenticate('local-login',{
 		successRedirect: '/user',
@@ -22,7 +22,7 @@ module.exports = function(app,passport){
 	//+================+
 	//| Local Register |
 	//+================+
-	app.get('/register',function(req,res){
+	app.get('/register', function(req,res){
 		res.render('register.ejs',{message: req.flash('signupMessage')});
 	});
 	app.post('/register',passport.authenticate('local-signup',{
@@ -34,10 +34,10 @@ module.exports = function(app,passport){
 	//+===============+
 	//|    Account    |
 	//+===============+
-	app.get('/user',isLoggedIn,function(req,res){  
+	app.get('/user', isLoggedIn,function(req,res){
 		res.render('user.ejs',{user:req.user});
 	});
-	app.get('/logout',function(req,res){
+	app.get('/logout', function(req,res){
 		req.logout();
 		res.redirect('/');
 	});
@@ -46,15 +46,22 @@ module.exports = function(app,passport){
 		res.render('user.ejs',{"user":{"id":09809,"username":"henk"}});
 	});
 
+	//+================+
+	//|     prices     |
+	//+================+
+	app.get('/prices', function(req,res){
+		res.render('prices.ejs');
+	});
+
 	//+===============+
 	//|     other     |
 	//+===============+
-	app.get('*',function(req,res){
+	app.get('*', function(req,res){
 		res.render('404.ejs');
 	});
 };
 
-function isLoggedIn(req,res,next){
+function isLoggedIn(req, res, next){
 	if (req.isAuthenticated())
 		return next();
 	res.redirect('/login');
