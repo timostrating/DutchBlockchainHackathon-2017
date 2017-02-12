@@ -42,6 +42,10 @@ module.exports = function(app,passport){
 		res.redirect('/');
 	});
 
+	app.get('/live', function(req,res){
+		res.render('live.ejs');
+	});
+
 	app.get('/dev', function(req,res){
 		res.render('user.ejs',{"user":{"id":09809,"username":"henk"}});
 	});
