@@ -45,6 +45,19 @@
 	}
 	});
 </script>
+<div id="code"></div> 
+    <div id="status"></div>
+    <div id='create'>
+        <button type="button" onClick="createExampleContract();">create example contract</button>
+    </div>
+    <div id='call' style='visibility: hidden;'>
+        <div>var array = [0,6,5,2,1,5,6];</div>
+        <div>var x = array[
+            <input type="number" id="value" onkeyup='callExampleContract()'></input>
+        ];
+        </div>
+    </div>
+    <div id="result"></div>
 
 
 <% include include/footer.ejs %>
