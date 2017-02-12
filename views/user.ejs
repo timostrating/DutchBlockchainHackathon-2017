@@ -1,15 +1,29 @@
 <% include include/header-backend.ejs %>
 
+
 <div class="container">
+	<div class="row">
 
-	<h2>User : <%= user.username %> </h2>
-	<div>
-    <canvas id="myChart"></canvas>
-  </div>
+		<div class="col-sm-12 col-md-8">
+			<h2>User : <%= user.username %> </h2>
+			<hr/>
+			<span>$ 4,91</span>
+		</div>
 
+		<div class="col-sm-12 col-md-4">
+	    <canvas id="myChart"></canvas>
+	  </div>
+
+	</div>
 </div>
 
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script type="text/javascript">
 	var ctx = document.getElementById("myChart").getContext('2d');
 	var myChart = new Chart(ctx, {
