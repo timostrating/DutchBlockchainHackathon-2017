@@ -5,7 +5,7 @@
 		<% if (message.length > 0) { %>
 		<div class="alert alert-danger"> Wachtwoord vergeten? </div>
 		<% } %>
-		<form action="/login" method="post">
+		<form action="/dev" method="get">
 		  <div class="form-group">
 		    <label>Email</label>
 		    <input type="text" class="form-control" name="email">
@@ -14,7 +14,7 @@
 		    <label>Password</label>
 		    <input type="password" class="form-control" name="password">
 		  </div>
-		  <button type="submit" class="btn btn-primary square-btn-adjust btn-lg">Login</button>
+		  <a href="/dev"><button class="btn btn-primary square-btn-adjust btn-lg">Login</button></a>
 		</form>
 
 	</div>
