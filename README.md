@@ -1,8 +1,6 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/timostrating/DutchBlockchainHackathon-2017)](https://bettercodehub.com)
 
 # Dutch Blockchain Hakckathon - 2017
-img SOON TM <br/>
-img SOON TM
 
 ## Dependicies
 * Node / npm
@@ -12,13 +10,13 @@ img SOON TM
 run ```npm install``` in the root of the project.
 
 ## The Problem
-SOON TM
+The Problem we were trying to solve is that there is currently no proof that a co2 certificate represents a real change into making the world greener.
 
 ## Use Case 
-SOON TM
+Consumer and Producers
 
 ## Our Solution
-SOON TM
+Introduce a Bitcoin like coin that gets connected to the certificate and can backup / proof its history.
 
 
 ## Programmers
